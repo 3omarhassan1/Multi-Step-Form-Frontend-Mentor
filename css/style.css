@@ -1,0 +1,181 @@
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+:root {
+  --Marine-blue: #02295a;
+  --Purplish-blue: #473dff;
+  --Pastel-blue: #adbeff;
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+
+  --Cool-gray: #9699ab;
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+  --pcolor: #9699ab;
+  --rad: 20px;
+  --pad: 60px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--maincolor);
+  opacity: 0.7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--textcolor);
+  background-color: var(--bgcolor);
+}
+
+section {
+  position: relative;
+  padding: 40px 0;
+}
+
+span {
+  color: var(--maincolor);
+  /* transition: var(--trans); */
+}
+
+p {
+  color: var(--pcolor);
+  /* margin: 0;
+  font-size: 18px;
+  line-height: 1.6; */
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  background-color: var(--maincolor);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px
+}
+
+/* button:hover {
+  background-color: #fff;
+}
+
+button:hover a {
+  color: var(--maincolor);
+} */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* end global rules */
+
+/* start my framework */
+
+/* .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.shad {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.my-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end my framework */
+
+.Nav {
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+}
+
+@media (max-width: 991px) {
+  .Nav {
+    background-image: url("../assets/images/bg-sidebar-mobile.svg");
+    flex-direction: row !important;
+    background-size: cover !important;
+    background-position: center center;
+    width: 100% !important;
+    justify-content: center;
+    align-items: flex-start;
+    height: 250px !important;
+    padding-top: 20px !important;
+  }
+
+
+  .form {
+    box-shadow: 0px 15px 20px 0px rgba(0, 64, 94, 0.12);
+    background-color: white;
+    padding: var(--pad);
+    border-radius: var(--rad);
+  }
+
+  .nav-item .text {
+    display: none;
+  }
+
+}
+
+.attribution {
+  background-color: var(--Purplish-blue);
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: .6em;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution a {
+  font-weight: 500 !important;
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: hsl(189, 95%, 78%);
+}
